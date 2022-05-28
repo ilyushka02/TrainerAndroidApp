@@ -25,7 +25,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.trainer.AllerDialogs.UploadImageDialog;
-import com.example.trainer.db.User;
+import com.example.trainer.db.Trainer;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -50,7 +50,7 @@ public class UpdateActivity extends AppCompatActivity implements View.OnClickLis
     private Button takeImg, updateUser;
     private Spinner gender;
     private ImageView update_img;
-    private User user;
+    private Trainer user;
     private Uri uploadPath;
 
 
@@ -86,7 +86,7 @@ public class UpdateActivity extends AppCompatActivity implements View.OnClickLis
         takeImg.setOnClickListener(this);
         //Инициализация элементов firebase
         storageRef = FirebaseStorage.getInstance().getReference(UserActivity.userID);
-        users = FirebaseDatabase.getInstance().getReference(User.USER_KEY);
+        users = FirebaseDatabase.getInstance().getReference(Trainer.USER_KEY);
     }
 
     @Override
@@ -113,7 +113,7 @@ public class UpdateActivity extends AppCompatActivity implements View.OnClickLis
         users.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                user = snapshot.child(UserActivity.userID).getValue(User.class);
+                user = snapshot.child(UserActivity.userID).getValue(Trainer.class);
                 if (!user.image.isEmpty()) Picasso.get().load(user.image).into(update_img);
                 username_f.setText(user.first);
                 username_l.setText(user.last);
@@ -199,7 +199,7 @@ public class UpdateActivity extends AppCompatActivity implements View.OnClickLis
 
     //Выгрузка данных пользователя в БД и их обновление
     private void saveUser() {
-        String last_name = "", first_name = "", second_name = "", email = user.email, str_phone = "", str_gender = "", str_birthday = "", imageURI = "";
+        String last_name = "", first_name = "", second_name = "",  strId_section = user.id_section, email = user.email, str_phone = "", str_gender = "", str_birthday = "", imageURI = "";
         //Если данные изменились, то перезаписываем, иначе оставляем
         if (!user.last.equals(username_l.getText().toString().trim()))
             last_name = username_l.getText().toString().trim();
@@ -227,7 +227,7 @@ public class UpdateActivity extends AppCompatActivity implements View.OnClickLis
             imageURI = user.image;
         }
 
-        User user = new User(UserActivity.userID, last_name, first_name, second_name, email, str_phone, str_gender, str_birthday, imageURI);
+        Trainer user = new Trainer(UserActivity.userID, last_name, first_name, second_name, strId_section,email, str_phone, str_gender, str_birthday, imageURI);
         users.child(UserActivity.userID).setValue(user);
 
         Toast toast = Toast.makeText(this, "Success", LENGTH_SHORT);

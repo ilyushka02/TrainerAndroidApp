@@ -16,7 +16,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.trainer.R;
 import com.example.trainer.UpdateActivity;
 import com.example.trainer.UserActivity;
-import com.example.trainer.db.User;
+import com.example.trainer.db.Trainer;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -31,7 +31,7 @@ public class ProfileFragment extends Fragment {
     private Button update;
     private ImageView avatar;
     View root;
-    private User user;
+    private Trainer user;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -54,7 +54,7 @@ public class ProfileFragment extends Fragment {
         avatar = (ImageView) root.findViewById(R.id.ProfileAvatar);
         update = (Button) root.findViewById(R.id.updateProfile);
         //Инициализация элементов firebase
-        users = FirebaseDatabase.getInstance().getReference(User.USER_KEY);
+        users = FirebaseDatabase.getInstance().getReference(Trainer.USER_KEY);
         //Установка слушателя нажатия
         update.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,7 +75,7 @@ public class ProfileFragment extends Fragment {
         users.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                user = snapshot.child(UserActivity.userID).getValue(User.class);
+                user = snapshot.child(UserActivity.userID).getValue(Trainer.class);
                 if (!user.image.isEmpty()) Picasso.get().load(user.image).into(avatar);
                 username.setText(user.last + " " + user.first + " " + user.second);
                 birthday.setText("дата рождения: " + user.data_birthday);

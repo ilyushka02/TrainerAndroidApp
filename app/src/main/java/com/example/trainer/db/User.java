@@ -1,7 +1,7 @@
 package com.example.trainer.db;
 
 public class User {
-    public static String USER_KEY = "TRAINER";
+    public static String USER_KEY = "USER";
     public String id, last, first, second, email, phone, gender, data_birthday, image;
 
     public User() {

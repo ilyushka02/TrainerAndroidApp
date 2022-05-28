@@ -4,163 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UpdateActivity">
+    tools:context=".ui.section.HomeFragment">
 
     <LinearLayout
+        android:id="@id/text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Спортсмены"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
         android:orientation="vertical"
-        android:padding="10dp">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/Section_imgProfile"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/shape_for_user_icon"
-            android:src="@drawable/user_icon"
-            app:civ_border_color="@color/green"
-            app:civ_border_width="5dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/heightTextEditSignUp"
-            android:gravity="center"
-            android:text="ИНФОРМАЦИЯ О ТРЕНИРОВКЕ"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/Section_name"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/heightTextEditSignUp"
-            android:gravity="center_vertical"
-            android:text="Баскетбол"
-            android:textSize="16dp" />
-
-        <TextView
-            android:id="@+id/Section_day"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/heightTextEditSignUp"
-            android:gravity="center_vertical"
-            android:text="Дни проведения тренировок: Пн, Ср, Пт"
-            android:textSize="16dp" />
-
-        <TextView
-            android:id="@+id/Section_time"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/heightTextEditSignUp"
-            android:gravity="center_vertical"
-            android:text="Время проведения тренировок: 18:00 - 21:00"
-            android:textSize="16dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/heightTextEditSignUp"
-            android:gravity="center"
-            android:text="ТРЕНЕР"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/Section_nameTrainer"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/heightTextEditSignUp"
-            android:gravity="center_vertical"
-            android:text="Иванов Иван Иванович"
-            android:textSize="16dp" />
+        app:layout_constraintTop_toTopOf="@+id/text"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/heightTextEditSignUp"
-                android:gravity="center_vertical"
-                android:text="Тел: "
-                android:textSize="16dp" />
-
-            <TextView
-                android:id="@+id/Section_phone"
+            <ListView
+                android:id="@+id/clientList"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/heightTextEditSignUp"
-                android:gravity="center_vertical"
-                android:onClick="openPhone"
-                android:text="89108809647"
-                android:textColor="@color/hiper_linc_color"
-                android:textSize="16dp" />
-
+                android:layout_height="320dp" />
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/Section_email"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/heightTextEditSignUp"
-            android:gravity="center_vertical"
-            android:text="ilya@mail.ru"
-            android:textSize="16dp" />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ProgressBar
+            android:id="@+id/progressBarSection"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/heightTextEditSignUp"
-                android:gravity="center_vertical"
-                android:text="Адрес: "
-                android:textSize="16dp" />
-
-            <TextView
-                android:id="@+id/Section_adres"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:gravity="center_vertical"
-                android:onClick="sectionOpenAddress"
-                android:text="Южное ш., 2Г, Нижний Новгород, Россия"
-                android:textColor="@color/hiper_linc_color"
-                android:textSize="16dp" />
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/Section_like"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:onClick="like"
-            android:text="Записаться"
-            android:textColor="@color/green"
-            android:textSize="10dp"
-            app:backgroundTint="@color/white" />
-
-        <Button
-            android:id="@+id/Section_dislike"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:onClick="dislike"
-            android:text="Отписаться"
-            android:textColor="@color/green"
-            android:textSize="10dp"
-            app:backgroundTint="@color/white" />
-
-        <Button
-            android:id="@+id/Section_back"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:text="Назад"
-            android:textColor="@color/white"
-            android:textSize="10dp"
-            app:backgroundTint="@color/green" />
+            android:layout_weight="1" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

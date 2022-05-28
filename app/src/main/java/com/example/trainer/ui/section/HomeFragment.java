@@ -1,20 +1,14 @@
 package com.example.trainer.ui.section;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.ViewFlipper;
 
 import com.example.trainer.R;
 
@@ -23,7 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.trainer.SectionActivity;
-import com.example.trainer.databinding.FragmentSectionBinding;
+import com.example.trainer.UserActivity;
 import com.example.trainer.db.Section;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -43,7 +37,6 @@ public class HomeFragment extends Fragment {
     private List<String> listSection;
     private List<Section> listTemp;
     private ProgressBar progressBar;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
@@ -80,8 +73,10 @@ public class HomeFragment extends Fragment {
                 for (DataSnapshot ds : snapshot.getChildren()) {
                     Section s = ds.getValue(Section.class);
                     assert s != null;
-                    listSection.add(s.name);
-                    listTemp.add(s);
+                    if (s.trainer.equals(UserActivity.userID)) {
+                        listSection.add(s.name);
+                        listTemp.add(s);
+                    }
                 }
                 adapter.notifyDataSetChanged();
                 progressBar.setVisibility(View.INVISIBLE);
@@ -112,7 +107,6 @@ public class HomeFragment extends Fragment {
         intent.putExtra("name", s.name);
         intent.putExtra("day", s.day);
         intent.putExtra("time", s.time);
-        intent.putExtra("trainer", s.trainer);
         startActivity(intent);
     }
 }
