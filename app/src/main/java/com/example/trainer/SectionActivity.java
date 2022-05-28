@@ -130,11 +130,11 @@ public class SectionActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     public void dislike(View view) {
-            LikeSection ls = new LikeSection(UserActivity.userID, UserActivity.userID, "");
-            like_section.child(UserActivity.userID).setValue(ls);
+        LikeSection ls = new LikeSection(UserActivity.userID, UserActivity.userID, "");
+        like_section.child(UserActivity.userID).setValue(ls);
 
-            Toast toast = Toast.makeText(this, "Вы отписались от секции", LENGTH_SHORT);
-            toast.setGravity(Gravity.CENTER, 0, 0);
-            toast.show();
+        Toast toast = Toast.makeText(this, "Вы отписались от секции", LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
     }
 }

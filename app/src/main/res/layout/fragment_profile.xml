@@ -28,7 +28,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TableLayout
                 android:layout_width="match_parent"
@@ -46,7 +46,7 @@
                         android:background="@drawable/shape_for_user_icon"
                         android:src="@drawable/user_icon"
                         app:civ_border_color="@color/green"
-                        app:civ_border_width="5dp"/>
+                        app:civ_border_width="5dp" />
 
                 </TableRow>
 
@@ -62,33 +62,35 @@
                     android:text="Редактировать профиль"
                     android:textColor="@color/green"
                     android:textSize="12dp"
-                    app:backgroundTint="@color/white"/>
+                    app:backgroundTint="@color/white" />
+
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:padding="5dp"
                     android:layout_marginTop="10dp"
-                    android:orientation="vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5dp">
 
                     <TextView
                         android:id="@+id/textView17"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
+                        android:text="Информация"
                         android:textAlignment="center"
-                        android:textStyle="bold"
                         android:textSize="18dp"
-                        android:text="Информация"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/ProfileUserName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="18dp"
-                        android:text="Насурллаев Илья Евгеньевич" />
+                        android:text="Насурллаев Илья Евгеньевич"
+                        android:textSize="18dp" />
 
                     <TextView
                         android:id="@+id/ProfileBirthday"
@@ -96,41 +98,41 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp"
-                        android:textSize="18dp"
-                        android:text="02.08. 2002" />
+                        android:text="02.08. 2002"
+                        android:textSize="18dp" />
 
                     <TextView
                         android:id="@+id/ProfileGender"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="20dp"
-                        android:textSize="18dp"
-                        android:text="пол: мужской" />
+                        android:text="пол: мужской"
+                        android:textSize="18dp" />
 
                     <TextView
                         android:id="@+id/textView16"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
+                        android:text="Контакты"
                         android:textAlignment="center"
-                        android:textStyle="bold"
                         android:textSize="18dp"
-                        android:text="Контакты"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/ProfileEmail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="18dp"
+                        android:layout_marginBottom="20dp"
                         android:text="mr.nasurllaev@mail.ru"
-                        android:layout_marginBottom="20dp"/>
+                        android:textSize="18dp" />
 
                     <TextView
                         android:id="@+id/ProfilePhone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="18dp"
+                        android:layout_marginBottom="20dp"
                         android:text="89108809647"
-                        android:layout_marginBottom="20dp"/>
+                        android:textSize="18dp" />
                 </LinearLayout>
 
             </TableLayout>

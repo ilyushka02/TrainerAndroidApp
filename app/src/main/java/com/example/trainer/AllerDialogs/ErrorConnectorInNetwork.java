@@ -20,7 +20,7 @@ public class ErrorConnectorInNetwork extends AppCompatDialogFragment {
                 .setMessage("Проверьте подключение и повторите попытку!")
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                            dialog.cancel();
+                        dialog.cancel();
                     }
                 });
         return builder.create();

@@ -24,7 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-public class ProfileFragment extends Fragment{
+public class ProfileFragment extends Fragment {
     private DatabaseReference users;
     private ProfileViewModel galleryViewModel;
     private TextView username, birthday, gender, email, phone;
@@ -42,6 +42,7 @@ public class ProfileFragment extends Fragment{
         getDataBase();
         return root;
     }
+
     //Инициализация компонентов
     private void initialization() {
         //Поиск элементов по id

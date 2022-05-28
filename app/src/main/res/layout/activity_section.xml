@@ -23,52 +23,53 @@
             android:src="@drawable/user_icon"
             app:civ_border_color="@color/green"
             app:civ_border_width="5dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/heightTextEditSignUp"
-            android:text ="ИНФОРМАЦИЯ О ТРЕНИРОВКЕ"
             android:gravity="center"
+            android:text="ИНФОРМАЦИЯ О ТРЕНИРОВКЕ"
             android:textSize="16dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/Section_name"
             android:layout_width="match_parent"
             android:layout_height="@dimen/heightTextEditSignUp"
-            android:text ="Баскетбол"
             android:gravity="center_vertical"
-            android:textSize="16dp"/>
+            android:text="Баскетбол"
+            android:textSize="16dp" />
 
         <TextView
             android:id="@+id/Section_day"
             android:layout_width="match_parent"
             android:layout_height="@dimen/heightTextEditSignUp"
-            android:text ="Дни проведения тренировок: Пн, Ср, Пт"
             android:gravity="center_vertical"
-            android:textSize="16dp"/>
+            android:text="Дни проведения тренировок: Пн, Ср, Пт"
+            android:textSize="16dp" />
 
         <TextView
             android:id="@+id/Section_time"
             android:layout_width="match_parent"
             android:layout_height="@dimen/heightTextEditSignUp"
-            android:text ="Время проведения тренировок: 18:00 - 21:00"
             android:gravity="center_vertical"
-            android:textSize="16dp"/>
+            android:text="Время проведения тренировок: 18:00 - 21:00"
+            android:textSize="16dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/heightTextEditSignUp"
-            android:text ="ТРЕНЕР"
             android:gravity="center"
+            android:text="ТРЕНЕР"
             android:textSize="16dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/Section_nameTrainer"
             android:layout_width="match_parent"
             android:layout_height="@dimen/heightTextEditSignUp"
-            android:text ="Иванов Иван Иванович"
             android:gravity="center_vertical"
+            android:text="Иванов Иван Иванович"
             android:textSize="16dp" />
 
         <LinearLayout
@@ -79,28 +80,29 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/heightTextEditSignUp"
-                android:text ="Тел: "
                 android:gravity="center_vertical"
+                android:text="Тел: "
                 android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/Section_phone"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/heightTextEditSignUp"
-                android:text ="89108809647"
-                android:textColor="@color/hiper_linc_color"
-                android:onClick="openPhone"
                 android:gravity="center_vertical"
+                android:onClick="openPhone"
+                android:text="89108809647"
+                android:textColor="@color/hiper_linc_color"
                 android:textSize="16dp" />
 
 
         </LinearLayout>
+
         <TextView
             android:id="@+id/Section_email"
             android:layout_width="match_parent"
             android:layout_height="@dimen/heightTextEditSignUp"
-            android:text ="ilya@mail.ru"
             android:gravity="center_vertical"
+            android:text="ilya@mail.ru"
             android:textSize="16dp" />
 
 
@@ -112,17 +114,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/heightTextEditSignUp"
-                android:text ="Адрес: "
                 android:gravity="center_vertical"
+                android:text="Адрес: "
                 android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/Section_adres"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text ="Южное ш., 2Г, Нижний Новгород, Россия"
                 android:gravity="center_vertical"
                 android:onClick="sectionOpenAddress"
+                android:text="Южное ш., 2Г, Нижний Новгород, Россия"
                 android:textColor="@color/hiper_linc_color"
                 android:textSize="16dp" />
 
@@ -133,10 +135,10 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
+            android:onClick="like"
             android:text="Записаться"
             android:textColor="@color/green"
             android:textSize="10dp"
-            android:onClick="like"
             app:backgroundTint="@color/white" />
 
         <Button
@@ -144,10 +146,10 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
+            android:onClick="dislike"
             android:text="Отписаться"
             android:textColor="@color/green"
             android:textSize="10dp"
-            android:onClick="dislike"
             app:backgroundTint="@color/white" />
 
         <Button

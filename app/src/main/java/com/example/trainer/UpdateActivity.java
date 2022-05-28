@@ -23,6 +23,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
 import com.example.trainer.AllerDialogs.UploadImageDialog;
 import com.example.trainer.db.User;
 import com.google.android.gms.tasks.Continuation;
