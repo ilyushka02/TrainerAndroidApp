@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.contacts.ContactFragment">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:layout_marginTop="400dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bacground_img" />
+
+    <ScrollView
+        android:id="@+id/UserActivityScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ProfileAvatar"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:background="@drawable/shape_for_user_icon"
+                        android:src="@drawable/user_icon"
+                        app:civ_border_color="@color/green"
+                        app:civ_border_width="5dp"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/updateProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Редактировать профиль"
+                    android:textColor="@color/green"
+                    android:textSize="12dp"
+                    app:backgroundTint="@color/white"/>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:text="Информация"/>
+
+                    <TextView
+                        android:id="@+id/ProfileUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:text="Насурллаев Илья Евгеньевич" />
+
+                    <TextView
+                        android:id="@+id/ProfileBirthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="18dp"
+                        android:text="02.08. 2002" />
+
+                    <TextView
+                        android:id="@+id/ProfileGender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="18dp"
+                        android:text="пол: мужской" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:text="Контакты"/>
+
+                    <TextView
+                        android:id="@+id/ProfileEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:text="mr.nasurllaev@mail.ru"
+                        android:layout_marginBottom="20dp"/>
+
+                    <TextView
+                        android:id="@+id/ProfilePhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:text="89108809647"
+                        android:layout_marginBottom="20dp"/>
+                </LinearLayout>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

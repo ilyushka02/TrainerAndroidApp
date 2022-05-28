@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Signin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_for_head"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Авторизация"
+                android:textColor="@color/white"
+                android:textSize="10pt"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:layout_marginTop="400dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bacground_img" />
+
+    <LinearLayout
+        android:id="@+id/body_signin_page"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_for_field"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/textFieldLogin"
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/fieldMarginLefRight"
+                android:layout_marginTop="@dimen/fieldMarginTopBotton"
+                android:layout_marginRight="@dimen/fieldMarginLefRight"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="email"
+                android:inputType="textEmailAddress"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/shape_for_field"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/textFieldPassword"
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/fieldMarginLefRight"
+                android:layout_marginTop="@dimen/fieldMarginTopBotton"
+                android:layout_marginRight="@dimen/fieldMarginLefRight"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="password"
+                android:inputType="textPassword"
+                android:textSize="15dp"
+                app:passwordToggleEnabled="true" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signin_btn"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/green"
+            android:text="Вход"
+            android:textSize="5pt"
+            app:cornerRadius="10dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

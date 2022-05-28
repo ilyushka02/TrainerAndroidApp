@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fieldMarginTopBotton">5dp</dimen>
+    <dimen name="fieldMarginLefRight">10dp</dimen>
+    <!--Экран регистрации.-->
+        <!--Заголовки форм-->
+    <dimen name="marginTopTextViewSignUp">5dp</dimen>
+    <dimen name="sizeTextViewSignUp">15dp</dimen>
+        <!--Поля заполнения-->
+    <dimen name="widthTextEditSignUp">300dp</dimen>
+    <dimen name="heightTextEditSignUp">40dp</dimen>
+    <dimen name="sizeTextEditSignUp">15dp</dimen>
+    <dimen name="marginBottomTextEditSignUp">25dp</dimen>
+
+    <!--Экран пользователя.-->
+    <dimen name="size_for_user_icon">96dp</dimen>
+    <dimen name="margin_for_TextView_user_nav">10dp</dimen>
+    <dimen name="size_for_TextView_user_nav">15dp</dimen>
+
+</resources>

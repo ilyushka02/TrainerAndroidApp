@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.contacts.ContactFragment">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:layout_marginTop="400dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bacground_img" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        android:src="@drawable/fitnes1"
+                        android:scaleType="centerInside"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/shape_for_field"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:text="Информация"/>
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="ФизКульт" />
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="18dp"
+                        android:text="Время работы в будни: 07:00-23:00;\n\nВыходные и праздничные дни: 09:00-22:00\n\nРабота детской комнаты в будни: 17:00-21:00; Выходные: 11:00-17:00" />
+
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="18dp"
+                        android:textColor="@color/hiper_linc_color"
+                        android:text="Южное ш., 2Г, Нижний Новгород"
+                        android:onClick="OpenAddress"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/shape_for_field"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:text="Контакты"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/hiper_linc_color"
+                        android:textSize="18dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="50dp"
+                        android:text="+7(910)880-87-98"
+                        android:onClick="openPhone1"
+                        android:layout_marginBottom="20dp"/>
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/hiper_linc_color"
+                        android:textSize="18dp"
+                        android:text="+7(910)880-96-47"
+                        android:onClick="openPhone2"
+                        android:layout_marginBottom="20dp"/>
+                </LinearLayout>
+                </LinearLayout>
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.trainer.ui.section.HomeFragment"
+        android:label="Главная"
+        tools:layout="@layout/fragment_section" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.trainer.ui.profile.ProfileFragment"
+        android:label="Профиль"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_contacts"
+        android:name="com.example.trainer.ui.contacts.ContactFragment"
+        android:label="Контакты"
+        tools:layout="@layout/fragment_contact" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.trainer.ui.settings.SettingsFragment"
+        android:label="Настройки"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

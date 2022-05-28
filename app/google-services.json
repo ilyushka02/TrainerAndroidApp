@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "85048767387",
+    "firebase_url": "https://sport-eb1e0-default-rtdb.firebaseio.com",
+    "project_id": "sport-eb1e0",
+    "storage_bucket": "sport-eb1e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85048767387:android:3699400b80797a4225e73e",
+        "android_client_info": {
+          "package_name": "com.example.sportjournal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85048767387-1ic5la1ggr7ijuep3ec6qt8inj4t2d24.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArJCzezEWX4VTmOBrWdhrmToNnNW_i-Ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "85048767387-1ic5la1ggr7ijuep3ec6qt8inj4t2d24.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85048767387:android:ba0989420b753f4b25e73e",
+        "android_client_info": {
+          "package_name": "com.example.trainer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85048767387-1ic5la1ggr7ijuep3ec6qt8inj4t2d24.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArJCzezEWX4VTmOBrWdhrmToNnNW_i-Ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "85048767387-1ic5la1ggr7ijuep3ec6qt8inj4t2d24.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
